@@ -1,0 +1,24 @@
+{
+  "name": "Cotizaciones CDE",
+  "short_name": "Cotiz CDE",
+  "description": "Visualizador en tiempo real de cotizaciones de casas de cambio en Ciudad del Este, Paraguay",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0b0e14",
+  "theme_color": "#0b0e14",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

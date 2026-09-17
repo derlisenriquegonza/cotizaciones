@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="110" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Border Glow -->
+  <rect x="12" y="12" width="488" height="488" rx="98" fill="none" stroke="url(#redGrad)" stroke-width="4" stroke-opacity="0.4"/>
+
+  <!-- Financial Icon & Currency Symbols -->
+  <g filter="url(#shadow)" transform="translate(256, 256)">
+    <!-- Dollar Sign -->
+    <path d="M-60 -90 C-60 -130 60 -130 60 -90 C60 -40 -60 -40 -60 10 C-60 60 60 60 60 10" fill="none" stroke="url(#redGrad)" stroke-width="32" stroke-linecap="round"/>
+    <line x1="0" y1="-150" x2="0" y2="70" stroke="url(#redGrad)" stroke-width="32" stroke-linecap="round"/>
+    
+    <!-- Real Sign R$ / Arrow -->
+    <path d="M-80 120 L80 120 M40 90 L80 120 L40 150" fill="none" stroke="url(#greenGrad)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M80 160 L-80 160 M-40 130 L-80 160 L-40 190" fill="none" stroke="#94a3b8" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- CDE Text Pill -->
+  <rect x="156" y="400" width="200" height="50" rx="25" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="256" y="433" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="4">CDE</text>
+</svg>

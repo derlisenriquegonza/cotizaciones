@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Cotizaciones CDE — Dólar y Real en Ciudad del Este</title>
+  <meta name="description" content="Visualizador profesional en tiempo real de cotizaciones del dólar y real en casas de cambio de Ciudad del Este, Paraguay (Bonanza, Chaco, Alberdi, La Moneda).">
+  
+  <!-- PWA & Mobile Icons -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="apple-touch-icon" href="icon.png">
+  <meta name="theme-color" content="#0b0e14">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Cotizaciones CDE">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="app-container">
+    
+    <!-- Main Header -->
+    <header class="app-header">
+      <div class="brand-badge">
+        <span class="brand-badge-dot"></span>
+        <span class="brand-badge-text">CDE • PARAGUAY</span>
+      </div>
+      <h1 class="app-title">COTIZACIONES CDE</h1>
+      <p class="app-subtitle">Actualización automática cada 15 segundos</p>
+      <div class="system-status">
+        <span class="system-status-dot"></span>
+        <span id="globalSystemStatus">Iniciando sistema...</span>
+      </div>
+    </header>
+
+    <!-- Control Bar (Timer & Immediate Refresh Button) -->
+    <section class="control-bar" aria-label="Controles de actualización">
+      <div class="countdown-box">
+        <span>⏱️ Próxima actualización en</span>
+        <span id="countdownNumber" class="countdown-number">15</span>
+        <span>s</span>
+      </div>
+      <button id="btnRefresh" class="btn-refresh" aria-label="Actualizar cotizaciones ahora">
+        <span class="refresh-icon" aria-hidden="true">🔄</span>
+        <span id="refreshBtnText">ACTUALIZAR AHORA</span>
+      </button>
+    </section>
+
+    <!-- Cards Container (Vertical cards per exchange house) -->
+    <section id="cardsContainer" class="cards-container" aria-label="Tarjetas de Casas de Cambio">
+      
+      <!-- SKELETON INITIAL CARDS -->
+      <article class="exchange-card">
+        <div class="card-header">
+          <div class="house-info">
+            <span class="house-title">🏦 BONANZA</span>
+            <span class="house-branch">Casa Matriz</span>
+          </div>
+          <span class="badge-status">Cargando...</span>
+        </div>
+      </article>
+
+      <article class="exchange-card">
+        <div class="card-header">
+          <div class="house-info">
+            <span class="house-title">🏦 CAMBIOS CHACO</span>
+            <span class="house-branch">Sucursal Adrián Jara</span>
+          </div>
+          <span class="badge-status">Cargando...</span>
+        </div>
+      </article>
+
+      <article class="exchange-card">
+        <div class="card-header">
+          <div class="house-info">
+            <span class="house-title">🏦 CAMBIOS ALBERDI</span>
+            <span class="house-branch">Ciudad del Este</span>
+          </div>
+          <span class="badge-status">Cargando...</span>
+        </div>
+      </article>
+
+      <article class="exchange-card">
+        <div class="card-header">
+          <div class="house-info">
+            <span class="house-title">🏦 LA MONEDA</span>
+            <span class="house-branch">Casa Matriz</span>
+          </div>
+          <span class="badge-status">Cargando...</span>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>Cotizaciones CDE — Versión 1.0 (Mobile PWA)</p>
+      <p style="margin-top:0.25rem;">Datos oficiales publicados directamente por cada fuente.</p>
+    </footer>
+
+  </main>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
